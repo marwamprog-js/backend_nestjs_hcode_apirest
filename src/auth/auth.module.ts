@@ -8,7 +8,7 @@ import { AuthService } from "./auth.service";
 @Module({
     imports: [
         JwtModule.register({
-            secret: `cJwvg4Bcjlw0=EF|w9+#Z@g8=KlF<bX*`
+            secret: process.env.JWT_SECRET
         }),
         forwardRef(() => UserModule),
         PrismaModule,
